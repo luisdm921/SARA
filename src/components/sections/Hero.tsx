@@ -18,7 +18,7 @@ export const Hero = () => {
       {/* Background with gradient overlay */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/95 via-blue-800/95 to-slate-900/95"></div>
-        
+
         {/* Animated blobs */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 -left-4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
@@ -99,7 +99,10 @@ export const Hero = () => {
             style={{ animationDelay: "0.6s" }}
           >
             <a href="#servicios">
-              <Button variant="secondary" className="w-full sm:w-auto text-lg px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-white">
+              <Button
+                variant="secondary"
+                className="w-full sm:w-auto text-lg px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-white"
+              >
                 Ver Servicios
               </Button>
             </a>
@@ -116,12 +119,17 @@ export const Hero = () => {
           {/* Floating Icons */}
           <div className="mt-16 flex justify-center space-x-12 opacity-50">
             <FaTools className="text-5xl text-white animate-float" />
-            <FaCogs className="text-5xl text-white animate-float" style={{ animationDelay: "1s" }} />
-            <FaIndustry className="text-5xl text-white animate-float" style={{ animationDelay: "2s" }} />
+            <FaCogs
+              className="text-5xl text-white animate-float"
+              style={{ animationDelay: "1s" }}
+            />
+            <FaIndustry
+              className="text-5xl text-white animate-float"
+              style={{ animationDelay: "2s" }}
+            />
           </div>
         </div>
       </div>
     </section>
   );
 };
-

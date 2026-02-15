@@ -15,20 +15,38 @@ export const About = () => {
   ];
 
   return (
-    <section id="nosotros" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section
+      id="nosotros"
+      className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           title="¿Quiénes Somos?"
           subtitle="Empresa mexicana enfocada en la solución de problemas"
         />
 
-        <div className="mb-16">
-          <Card className="card-hover bg-gradient-to-br from-white to-blue-50/50 border-blue-100">
+        <div className="mb-16 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Imagen */}
+          <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
+            <img
+              src="/images/AboutUS.jpg"
+              alt="Servicios e Ingeniería SARA"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+
+          {/* Texto */}
+          <Card className="card-hover bg-gradient-to-br from-white to-blue-50/50 border-blue-100 h-full flex flex-col justify-center">
             <p className="text-lg text-gray-700 leading-relaxed">
-              Empresa mexicana enfocada en la solución de problemas dentro de la industria adaptándonos a las necesidades de los clientes y haciendo uso de herramienta, personal y mano de obra calificada.
+              Empresa mexicana enfocada en la solución de problemas dentro de la
+              industria adaptándonos a las necesidades de los clientes y
+              haciendo uso de herramienta, personal y mano de obra calificada.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mt-4">
-              Ofrecemos servicio de mantenimiento preventivo, correctivo y reacondicionamiento de equipos, así como también suministro de refacciones; contamos con las mejores marcas y modelos en equipos.
+              Ofrecemos servicio de mantenimiento preventivo, correctivo y
+              reacondicionamiento de equipos, así como también suministro de
+              refacciones; contamos con las mejores marcas y modelos en equipos.
             </p>
           </Card>
         </div>
@@ -81,4 +99,3 @@ export const About = () => {
     </section>
   );
 };
-

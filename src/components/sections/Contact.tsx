@@ -1,14 +1,19 @@
 "use client";
 
 import { SectionHeader, Button } from "@/components/ui";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 export const Contact = () => {
   return (
     <section id="contacto" className="relative py-20 overflow-hidden">
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900"></div>
-      
+
       {/* Animated blobs */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 -left-4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
@@ -54,7 +59,9 @@ export const Contact = () => {
                   <FaPhone className="text-2xl text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">Teléfono</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-white">
+                    Teléfono
+                  </h3>
                   <a
                     href="tel:8443900702"
                     className="text-cyan-300 hover:text-cyan-200 transition-colors duration-300 text-lg font-medium"
@@ -71,7 +78,9 @@ export const Contact = () => {
                   <FaEnvelope className="text-2xl text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-white">
+                    Email
+                  </h3>
                   <a
                     href="mailto:servicios.e.ingenieria.sara@gmail.com"
                     className="text-cyan-300 hover:text-cyan-200 transition-colors duration-300 break-all text-sm md:text-base"
@@ -88,10 +97,10 @@ export const Contact = () => {
                   <FaMapMarkerAlt className="text-2xl text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-white">Ubicación</h3>
-                  <p className="text-cyan-300">
-                    República Mexicana
-                  </p>
+                  <h3 className="text-xl font-semibold mb-2 text-white">
+                    Ubicación
+                  </h3>
+                  <p className="text-cyan-300">República Mexicana</p>
                 </div>
               </div>
             </div>
@@ -103,13 +112,11 @@ export const Contact = () => {
               ¿Necesitas una Cotización?
             </h3>
             <p className="text-blue-100 mb-8 text-center text-lg">
-              Contáctanos y te brindaremos una solución personalizada para tus necesidades industriales.
+              Contáctanos y te brindaremos una solución personalizada para tus
+              necesidades industriales.
             </p>
             <div className="space-y-4">
-              <a
-                href="tel:8443900702"
-                className="block w-full"
-              >
+              <a href="tel:8443900702" className="block w-full">
                 <Button
                   variant="secondary"
                   className="w-full flex items-center justify-center space-x-2 bg-cyan-500 hover:bg-cyan-600 text-white shadow-lg hover:shadow-xl transition-all"
@@ -151,4 +158,3 @@ export const Contact = () => {
     </section>
   );
 };
-

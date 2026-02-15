@@ -1,5 +1,9 @@
 export { Hero } from "./Hero";
 export { About } from "./About";
 export { Services } from "./Services";
+export { Machinery } from "./Machinery";
+export { UsedEquipment } from "./UsedEquipment";
+export { WeldingEquipment } from "./WeldingEquipment";
+export { MROSupplies } from "./MROSupplies";
 export { Brands } from "./Brands";
 export { Contact } from "./Contact";

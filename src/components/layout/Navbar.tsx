@@ -21,6 +21,10 @@ export const Navbar = () => {
     { href: "#inicio", label: "Inicio" },
     { href: "#nosotros", label: "Nosotros" },
     { href: "#servicios", label: "Servicios" },
+    { href: "#maquinaria", label: "Maquinaria" },
+    { href: "#equipo-seminuevo", label: "Equipo Seminuevo" },
+    { href: "#equipos-soldadura", label: "Soldadura" },
+    { href: "#mro-consumibles", label: "MRO" },
     { href: "#marcas", label: "Marcas" },
     { href: "#contacto", label: "Contacto" },
   ];
@@ -46,9 +50,7 @@ export const Navbar = () => {
             <Link href="/" className="flex items-center gap-3 group">
               <div
                 className={`transition-all duration-300 ${
-                  isScrolled
-                    ? "text-primary" 
-                    : "text-cyan-400"
+                  isScrolled ? "text-primary" : "text-cyan-400"
                 }`}
               >
                 <FaIndustry className="text-3xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" />
@@ -163,7 +165,9 @@ export const Navbar = () => {
             <FaIndustry className="text-5xl text-cyan-400 animate-pulse" />
             <div className="flex flex-col">
               <span className="text-3xl font-bold text-white">SARA</span>
-              <span className="text-sm text-cyan-300">Servicios e Ingeniería</span>
+              <span className="text-sm text-cyan-300">
+                Servicios e Ingeniería
+              </span>
             </div>
           </div>
 

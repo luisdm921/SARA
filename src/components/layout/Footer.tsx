@@ -1,4 +1,10 @@
-import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -65,8 +71,8 @@ export const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>
-            &copy; {new Date().getFullYear()} Servicios e Ingeniería SARA.
-            Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} Servicios e Ingeniería SARA. Todos
+            los derechos reservados.
           </p>
         </div>
       </div>

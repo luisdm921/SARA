@@ -20,9 +20,10 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
         <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full mx-auto"></div>
       </div>
       {subtitle && (
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto mt-6 leading-relaxed">{subtitle}</p>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto mt-6 leading-relaxed">
+          {subtitle}
+        </p>
       )}
     </div>
   );
 };
-
