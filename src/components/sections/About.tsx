@@ -23,15 +23,10 @@ export const About = () => {
         <div className="mb-16">
           <Card>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Somos una empresa mexicana enfocada en la solución de problemas
-              dentro de la industria, adaptándonos a las necesidades de los
-              clientes y haciendo uso de herramienta, personal y mano de obra
-              calificada.
+              Empresa mexicana enfocada en la solución de problemas dentro de la industria adaptándonos a las necesidades de los clientes y haciendo uso de herramienta, personal y mano de obra calificada.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mt-4">
-              Ofrecemos servicio de mantenimiento preventivo, correctivo y
-              reacondicionamiento de equipos, así como también suministro de
-              refacciones; contamos con las mejores marcas y modelos en equipos.
+              Ofrecemos servicio de mantenimiento preventivo, correctivo y reacondicionamiento de equipos, así como también suministro de refacciones; contamos con las mejores marcas y modelos en equipos.
             </p>
           </Card>
         </div>

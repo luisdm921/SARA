@@ -14,37 +14,37 @@ export const Services = () => {
       icon: FaHammer,
       title: "Herrería y Pailería",
       description:
-        "Servicios especializados en herrería y pailería industrial para todo tipo de proyectos.",
+        "Servicios especializados en herrería y pailería industrial.",
     },
     {
       icon: FaWrench,
-      title: "Reparación de Equipos",
+      title: "Reparación de Equipo y Maquinaria",
       description:
-        "Reparación profesional de equipo y maquinaria industrial con garantía de calidad.",
+        "Reparación profesional de equipo y maquinaria industrial.",
     },
     {
       icon: FaCog,
       title: "Mantenimiento Preventivo",
       description:
-        "Mantenimiento preventivo a dobladoras, prensas, waterjet y más maquinaria industrial.",
+        "Mantenimiento preventivo a dobladoras, prensas, waterjet y mas.",
     },
     {
       icon: FaBolt,
-      title: "Instalaciones Eléctricas",
+      title: "Instalaciones",
       description:
-        "Instalaciones neumáticas, hidráulicas y eléctricas para sistemas industriales.",
+        "Instalaciones neumáticas, hidráulicas y eléctricas.",
     },
     {
       icon: FaTools,
-      title: "Tornillos de Bola",
+      title: "Fabricación de Tornillos de Bola",
       description:
-        "Fabricación y reparación de tornillos de bola para maquinaria de precisión.",
+        "Fabricación de tornillos de bola y reparación de husillos.",
     },
     {
       icon: FaTint,
       title: "Mantenimiento CNC",
       description:
-        "Mantenimiento preventivo y correctivo especializado para maquinaria CNC.",
+        "Mantenimiento preventivo y correctivo a maquinaria CNC.",
     },
   ];
 
