@@ -25,12 +25,12 @@ export const WhatsAppButton = () => {
   const handleClick = () => {
     // Mensaje predefinido opcional
     const message = encodeURIComponent(
-      "Hola, me gustaría obtener más información sobre sus servicios industriales."
+      "Hola, me gustaría obtener más información sobre sus servicios industriales.",
     );
     window.open(
       `https://wa.me/528443900702?text=${message}`,
       "_blank",
-      "noopener,noreferrer"
+      "noopener,noreferrer",
     );
   };
 
@@ -83,8 +83,11 @@ export const WhatsAppButton = () => {
         >
           {/* Círculos de animación */}
           <span className="absolute inset-0 rounded-full bg-green-500 opacity-75 animate-ping"></span>
-          <span className="absolute inset-0 rounded-full bg-green-500 opacity-50 animate-ping" style={{ animationDelay: "1s" }}></span>
-          
+          <span
+            className="absolute inset-0 rounded-full bg-green-500 opacity-50 animate-ping"
+            style={{ animationDelay: "1s" }}
+          ></span>
+
           {/* Icono */}
           <FaWhatsapp className="relative z-10 text-3xl md:text-4xl" />
 
@@ -120,7 +123,8 @@ export const WhatsAppButton = () => {
         }
 
         @keyframes pulse-slow {
-          0%, 100% {
+          0%,
+          100% {
             transform: scale(1);
           }
           50% {
