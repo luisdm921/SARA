@@ -66,7 +66,7 @@ export const Machinery = () => {
         />
 
         {/* Galería moderna */}
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {machines.map((machine, index) => (
             <div
               key={machine.id}

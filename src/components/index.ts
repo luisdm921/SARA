@@ -6,3 +6,6 @@ export * from "./sections";
 
 // UI components
 export * from "./ui";
+
+// Other components
+export { WhatsAppButton } from "./WhatsAppButton";

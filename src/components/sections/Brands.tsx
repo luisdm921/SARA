@@ -1,36 +1,52 @@
 "use client";
 
 import { SectionHeader } from "@/components/ui";
-import { FaIndustry, FaCog } from "react-icons/fa";
 
 export const Brands = () => {
-  // Basado en el PDF, aquí se pueden agregar las marcas específicas cuando se tengan los logos
-  const brandCategories = [
+  // Logos optimizados de marcas
+  const brands = [
     {
-      icon: FaIndustry,
-      title: "Maquinaria Industrial",
-      items: ["CNC", "Dobladoras", "Prensas", "Waterjet"],
-      gradient: "from-blue-500 to-blue-600",
-      bgGradient: "from-blue-50 to-white",
+      name: "BFT",
+      logo: "/images/logos_marcas_optimized/BFT23002-1-USA-RGB_Logo-Unterzeile.png",
+    },
+    { name: "Dixon", logo: "/images/logos_marcas_optimized/Dixon_logo.png" },
+    { name: "EXAIR", logo: "/images/logos_marcas_optimized/EXAIR_LOGO.png" },
+    { name: "Flow", logo: "/images/logos_marcas_optimized/Flow_logo.png" },
+    {
+      name: "KMT Group",
+      logo: "/images/logos_marcas_optimized/KMT_Group__Logo.png",
     },
     {
-      icon: FaCog,
-      title: "Sistemas Especializados",
-      items: [
-        "Tornillos de Bola",
-        "Husillos",
-        "Sistemas Neumáticos",
-        "Sistemas Hidráulicos",
-      ],
-      gradient: "from-cyan-500 to-cyan-600",
-      bgGradient: "from-cyan-50 to-white",
+      name: "Loctite",
+      logo: "/images/logos_marcas_optimized/Loctite_logo.png",
+    },
+    {
+      name: "LyndexNikken",
+      logo: "/images/logos_marcas_optimized/LyndexNikken_logo.png",
+    },
+    {
+      name: "Mobile",
+      logo: "/images/logos_marcas_optimized/mobile-logo-png-1358.png",
+    },
+    { name: "OMAX", logo: "/images/logos_marcas_optimized/omax-logo.png" },
+    { name: "Sandvik", logo: "/images/logos_marcas_optimized/Sandvik.png" },
+    {
+      name: "Semyx",
+      logo: "/images/logos_marcas_optimized/semyx-header-logo.png",
+    },
+    {
+      name: "Toolmex",
+      logo: "/images/logos_marcas_optimized/TOOLMEX-LOGO.png",
     },
   ];
+
+  // Duplicar marcas para efecto infinito
+  const duplicatedBrands = [...brands, ...brands];
 
   return (
     <section
       id="marcas"
-      className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"
+      className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
@@ -38,46 +54,92 @@ export const Brands = () => {
           subtitle="Equipos y refacciones de las mejores marcas del mercado"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {brandCategories.map((category, index) => {
-            const Icon = category.icon;
-            return (
-              <div
-                key={index}
-                className={`bg-gradient-to-br ${category.bgGradient} rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 border border-blue-100`}
-              >
+        {/* Carrusel infinito superior */}
+        <div className="relative mt-12 mb-8">
+          {/* Degradado izquierdo */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
+
+          {/* Degradado derecho */}
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
+
+          {/* Contenedor del carrusel */}
+          <div className="flex overflow-hidden">
+            {/* Primera fila - animación de izquierda a derecha */}
+            <div className="flex animate-scroll-left">
+              {duplicatedBrands.map((brand, index) => (
                 <div
-                  className={`bg-gradient-to-br ${category.gradient} text-white w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}
+                  key={`left-${index}`}
+                  className="flex-shrink-0 mx-6 w-48 h-32 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center p-6 group"
                 >
-                  <Icon className="text-3xl" />
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                  {category.title}
-                </h3>
-                <ul className="space-y-3">
-                  {category.items.map((item, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-center text-gray-700 text-lg hover:text-blue-600 transition-colors duration-200"
-                    >
-                      <span className="w-2 h-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mr-3"></span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="mt-12 text-center">
+        {/* Grid de logos para dispositivos pequeños */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-16 lg:hidden">
+          {brands.map((brand, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center justify-center p-6 h-32 group"
+              style={{
+                animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
+              }}
+            >
+              <img
+                src={brand.logo}
+                alt={brand.name}
+                className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 text-center">
           <div className="bg-white rounded-2xl shadow-lg p-6 max-w-2xl mx-auto border border-blue-100">
             <p className="text-gray-700 text-lg font-medium">
-              Contamos con las mejores marcas y modelos en equipos industriales
+              Distribuidores autorizados de las mejores marcas del mercado
+              industrial
             </p>
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-scroll-left {
+          animation: scroll-left 40s linear infinite;
+        }
+
+        .animate-scroll-left:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   );
 };

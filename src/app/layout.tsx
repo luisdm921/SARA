@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Navbar, Footer } from "@/components";
+import { Navbar, Footer, WhatsAppButton } from "@/components";
 
 export const metadata: Metadata = {
   title: "Servicios e Ingeniería SARA - Mantenimiento Industrial",
@@ -30,6 +30,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
