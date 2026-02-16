@@ -11,51 +11,51 @@ export const WeldingEquipment = () => {
   const equipment = [
     {
       id: 1,
-      image: "/images/welding-equipment/soldadora-mig-2.jpg",
+      image: "/images/welding-equipment/soldadora-mig-2.webp",
     },
     {
       id: 2,
-      image: "/images/welding-equipment/soldadora-tig-1.jpg",
+      image: "/images/welding-equipment/soldadora-tig-1.webp",
     },
     {
       id: 3,
-      image: "/images/welding-equipment/soldadora-tig-2.jpg",
+      image: "/images/welding-equipment/soldadora-tig-2.webp",
     },
     {
       id: 4,
-      image: "/images/welding-equipment/soldadora-arco-1.jpg",
+      image: "/images/welding-equipment/soldadora-arco-1.webp",
     },
     {
       id: 5,
-      image: "/images/welding-equipment/soldadora-inverter-1.jpg",
+      image: "/images/welding-equipment/soldadora-inverter-1.webp",
     },
     {
       id: 6,
-      image: "/images/welding-equipment/soldadora-multiproceso-1.jpg",
+      image: "/images/welding-equipment/soldadora-multiproceso-1.webp",
     },
     {
       id: 7,
-      image: "/images/welding-equipment/soldadora-orbital-1.jpg",
+      image: "/images/welding-equipment/soldadora-orbital-1.webp",
     },
     {
       id: 8,
-      image: "/images/welding-equipment/soldadora-resistencia-1.jpg",
+      image: "/images/welding-equipment/soldadora-resistencia-1.webp",
     },
     {
       id: 9,
-      image: "/images/welding-equipment/soldadora-laser-1.jpg",
+      image: "/images/welding-equipment/soldadora-laser-1.webp",
     },
     {
       id: 10,
-      image: "/images/welding-equipment/plasma-cutter-1.jpg",
+      image: "/images/welding-equipment/plasma-cutter-1.webp",
     },
     {
       id: 11,
-      image: "/images/welding-equipment/generador-soldadura-1.jpg",
+      image: "/images/welding-equipment/generador-soldadura-1.webp",
     },
     {
       id: 12,
-      image: "/images/welding-equipment/extractor-humos-soldadura-1.jpg",
+      image: "/images/welding-equipment/extractor-humos-soldadura-1.webp",
     },
   ];
 
@@ -115,6 +115,9 @@ export const WeldingEquipment = () => {
                 <img
                   src={item.image}
                   alt={`Equipo de soldadura ${item.id}`}
+                  loading="lazy"
+                  width={400}
+                  height={400}
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 p-4"
                 />
 

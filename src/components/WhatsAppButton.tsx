@@ -82,11 +82,7 @@ export const WhatsAppButton = () => {
           aria-label="Contactar por WhatsApp"
         >
           {/* Círculos de animación */}
-          <span className="absolute inset-0 rounded-full bg-green-500 opacity-75 animate-ping"></span>
-          <span
-            className="absolute inset-0 rounded-full bg-green-500 opacity-50 animate-ping"
-            style={{ animationDelay: "1s" }}
-          ></span>
+          <span className="absolute inset-0 rounded-full bg-green-500 opacity-50 animate-ping" style={{ animationDuration: '3s' }}></span>
 
           {/* Icono */}
           <FaWhatsapp className="relative z-10 text-3xl md:text-4xl" />

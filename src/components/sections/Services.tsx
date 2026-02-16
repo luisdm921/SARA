@@ -20,7 +20,7 @@ export const Services = () => {
       color: "from-blue-500 to-blue-600",
       bgColor: "from-blue-50 to-white",
       borderColor: "border-blue-200",
-      image: "/images/Herreria-y-Paileria.jpg",
+      image: "/images/Herreria-y-Paileria.webp",
     },
     {
       icon: FaWrench,
@@ -29,7 +29,7 @@ export const Services = () => {
       color: "from-cyan-500 to-cyan-600",
       bgColor: "from-cyan-50 to-white",
       borderColor: "border-cyan-200",
-      image: "/images/Reparacion-Equipo-Maquinaria.jpg",
+      image: "/images/Reparacion-Equipo-Maquinaria.webp",
     },
     {
       icon: FaCog,
@@ -39,7 +39,7 @@ export const Services = () => {
       color: "from-slate-500 to-slate-600",
       bgColor: "from-slate-50 to-white",
       borderColor: "border-slate-200",
-      image: "/images/Mantenimiento-Preventivo-Dobladoras.jpg",
+      image: "/images/Mantenimiento-Preventivo-Dobladoras.webp",
     },
     {
       icon: FaBolt,
@@ -48,7 +48,7 @@ export const Services = () => {
       color: "from-yellow-500 to-amber-600",
       bgColor: "from-yellow-50 to-white",
       borderColor: "border-yellow-200",
-      image: "/images/Instalacione-Neumaticas.jpg",
+      image: "/images/Instalacione-Neumaticas.webp",
     },
     {
       icon: FaTools,
@@ -57,7 +57,7 @@ export const Services = () => {
       color: "from-indigo-500 to-indigo-600",
       bgColor: "from-indigo-50 to-white",
       borderColor: "border-indigo-200",
-      image: "/images/Fabricacion-Tornillos.jpg",
+      image: "/images/Fabricacion-Tornillos.webp",
     },
     {
       icon: FaTint,
@@ -66,7 +66,7 @@ export const Services = () => {
       color: "from-purple-500 to-purple-600",
       bgColor: "from-purple-50 to-white",
       borderColor: "border-purple-200",
-      image: "/images/Mantenimineto-Correctivo-Preventivo-Maquinarias.jpg",
+      image: "/images/Mantenimineto-Correctivo-Preventivo-Maquinarias.webp",
     },
   ];
 
@@ -91,6 +91,9 @@ export const Services = () => {
                   <img
                     src={service.image}
                     alt={service.title}
+                    loading="lazy"
+                    width={400}
+                    height={256}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>

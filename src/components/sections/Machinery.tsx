@@ -11,19 +11,19 @@ export const Machinery = () => {
   const machines = [
     {
       id: 1,
-      image: "/images/machinery/cnc-torno-1.jpg",
+      image: "/images/machinery/cnc-torno-1.webp",
     },
     {
       id: 2,
-      image: "/images/machinery/cnc-fresadora-1.jpg",
+      image: "/images/machinery/cnc-fresadora-1.webp",
     },
     {
       id: 3,
-      image: "/images/machinery/cnc-centro-mecanizado-1.jpg",
+      image: "/images/machinery/cnc-centro-mecanizado-1.webp",
     },
     {
       id: 4,
-      image: "/images/machinery/cnc-torno-2.jpg",
+      image: "/images/machinery/cnc-torno-2.webp",
     },
   ];
 
@@ -81,6 +81,9 @@ export const Machinery = () => {
                 <img
                   src={machine.image}
                   alt={`Maquinaria CNC ${machine.id}`}
+                  loading="lazy"
+                  width={400}
+                  height={400}
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 p-4"
                 />
 

@@ -7,36 +7,36 @@ export const Brands = () => {
   const brands = [
     {
       name: "BFT",
-      logo: "/images/logos_marcas_optimized/BFT23002-1-USA-RGB_Logo-Unterzeile.png",
+      logo: "/images/logos_marcas_optimized/BFT23002-1-USA-RGB_Logo-Unterzeile.webp",
     },
-    { name: "Dixon", logo: "/images/logos_marcas_optimized/Dixon_logo.png" },
-    { name: "EXAIR", logo: "/images/logos_marcas_optimized/EXAIR_LOGO.png" },
-    { name: "Flow", logo: "/images/logos_marcas_optimized/Flow_logo.png" },
+    { name: "Dixon", logo: "/images/logos_marcas_optimized/Dixon_logo.webp" },
+    { name: "EXAIR", logo: "/images/logos_marcas_optimized/EXAIR_LOGO.webp" },
+    { name: "Flow", logo: "/images/logos_marcas_optimized/Flow_logo.webp" },
     {
       name: "KMT Group",
-      logo: "/images/logos_marcas_optimized/KMT_Group__Logo.png",
+      logo: "/images/logos_marcas_optimized/KMT_Group__Logo.webp",
     },
     {
       name: "Loctite",
-      logo: "/images/logos_marcas_optimized/Loctite_logo.png",
+      logo: "/images/logos_marcas_optimized/Loctite_logo.webp",
     },
     {
       name: "LyndexNikken",
-      logo: "/images/logos_marcas_optimized/LyndexNikken_logo.png",
+      logo: "/images/logos_marcas_optimized/LyndexNikken_logo.webp",
     },
     {
       name: "Mobile",
-      logo: "/images/logos_marcas_optimized/mobile-logo-png-1358.png",
+      logo: "/images/logos_marcas_optimized/mobile-logo-png-1358.webp",
     },
-    { name: "OMAX", logo: "/images/logos_marcas_optimized/omax-logo.png" },
-    { name: "Sandvik", logo: "/images/logos_marcas_optimized/Sandvik.png" },
+    { name: "OMAX", logo: "/images/logos_marcas_optimized/omax-logo.webp" },
+    { name: "Sandvik", logo: "/images/logos_marcas_optimized/Sandvik.webp" },
     {
       name: "Semyx",
-      logo: "/images/logos_marcas_optimized/semyx-header-logo.png",
+      logo: "/images/logos_marcas_optimized/semyx-header-logo.webp",
     },
     {
       name: "Toolmex",
-      logo: "/images/logos_marcas_optimized/TOOLMEX-LOGO.png",
+      logo: "/images/logos_marcas_optimized/TOOLMEX-LOGO.webp",
     },
   ];
 
@@ -74,6 +74,9 @@ export const Brands = () => {
                   <img
                     src={brand.logo}
                     alt={brand.name}
+                    loading="lazy"
+                    width={192}
+                    height={128}
                     className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                   />
                 </div>
@@ -95,6 +98,9 @@ export const Brands = () => {
               <img
                 src={brand.logo}
                 alt={brand.name}
+                loading="lazy"
+                width={192}
+                height={128}
                 className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
               />
             </div>

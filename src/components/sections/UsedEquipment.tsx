@@ -11,35 +11,35 @@ export const UsedEquipment = () => {
   const equipment = [
     {
       id: 1,
-      image: "/images/used-equipment/torno-seminuevo-1.jpg",
+      image: "/images/used-equipment/torno-seminuevo-1.webp",
     },
     {
       id: 2,
-      image: "/images/used-equipment/torno-seminuevo-2.jpg",
+      image: "/images/used-equipment/torno-seminuevo-2.webp",
     },
     {
       id: 3,
-      image: "/images/used-equipment/fresadora-seminueva-1.jpg",
+      image: "/images/used-equipment/fresadora-seminueva-1.webp",
     },
     {
       id: 4,
-      image: "/images/used-equipment/rectificadora-seminueva-1.jpg",
+      image: "/images/used-equipment/rectificadora-seminueva-1.webp",
     },
     {
       id: 5,
-      image: "/images/used-equipment/dobladora-seminueva-1.jpg",
+      image: "/images/used-equipment/dobladora-seminueva-1.webp",
     },
     {
       id: 6,
-      image: "/images/used-equipment/cortadora-seminueva-1.jpg",
+      image: "/images/used-equipment/cortadora-seminueva-1.webp",
     },
     {
       id: 7,
-      image: "/images/used-equipment/prensa-hidraulica-seminueva-1.jpg",
+      image: "/images/used-equipment/prensa-hidraulica-seminueva-1.webp",
     },
     {
       id: 8,
-      image: "/images/used-equipment/taladro-columna-seminuevo-1.jpg",
+      image: "/images/used-equipment/taladro-columna-seminuevo-1.webp",
     },
   ];
 
@@ -96,6 +96,9 @@ export const UsedEquipment = () => {
                 <img
                   src={item.image}
                   alt={`Equipo seminuevo ${item.id}`}
+                  loading="lazy"
+                  width={400}
+                  height={400}
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 p-4"
                 />
 

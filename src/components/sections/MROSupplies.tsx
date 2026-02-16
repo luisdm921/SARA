@@ -11,63 +11,63 @@ export const MROSupplies = () => {
   const products = [
     {
       id: 1,
-      image: "/images/mro-supplies/herramientas-manuales-1.jpg",
+      image: "/images/mro-supplies/herramientas-manuales-1.webp",
     },
     {
       id: 2,
-      image: "/images/mro-supplies/herramientas-electricas-1.jpg",
+      image: "/images/mro-supplies/herramientas-electricas-1.webp",
     },
     {
       id: 3,
-      image: "/images/mro-supplies/herramientas-neumáticas-1.jpg",
+      image: "/images/mro-supplies/herramientas-neumáticas-1.webp",
     },
     {
       id: 4,
-      image: "/images/mro-supplies/abrasivos-disco-1.jpg",
+      image: "/images/mro-supplies/abrasivos-disco-1.webp",
     },
     {
       id: 5,
-      image: "/images/mro-supplies/abrasivos-lijas-1.jpg",
+      image: "/images/mro-supplies/abrasivos-lijas-1.webp",
     },
     {
       id: 6,
-      image: "/images/mro-supplies/lubricantes-industriales-1.jpg",
+      image: "/images/mro-supplies/lubricantes-industriales-1.webp",
     },
     {
       id: 7,
-      image: "/images/mro-supplies/fluidos-corte-1.jpg",
+      image: "/images/mro-supplies/fluidos-corte-1.webp",
     },
     {
       id: 8,
-      image: "/images/mro-supplies/epp-proteccion-1.jpg",
+      image: "/images/mro-supplies/epp-proteccion-1.webp",
     },
     {
       id: 9,
-      image: "/images/mro-supplies/equipos-seguridad-1.jpg",
+      image: "/images/mro-supplies/equipos-seguridad-1.webp",
     },
     {
       id: 10,
-      image: "/images/mro-supplies/sujetadores-tornilleria-1.jpg",
+      image: "/images/mro-supplies/sujetadores-tornilleria-1.webp",
     },
     {
       id: 11,
-      image: "/images/mro-supplies/medicion-calibracion-1.jpg",
+      image: "/images/mro-supplies/medicion-calibracion-1.webp",
     },
     {
       id: 12,
-      image: "/images/mro-supplies/limpieza-industrial-1.jpg",
+      image: "/images/mro-supplies/limpieza-industrial-1.webp",
     },
     {
       id: 13,
-      image: "/images/mro-supplies/consumibles-taller-1.jpg",
+      image: "/images/mro-supplies/consumibles-taller-1.webp",
     },
     {
       id: 14,
-      image: "/images/mro-supplies/accesorios-maquinado-1.jpg",
+      image: "/images/mro-supplies/accesorios-maquinado-1.webp",
     },
     {
       id: 15,
-      image: "/images/mro-supplies/suministros-soldadura-1.jpg",
+      image: "/images/mro-supplies/suministros-soldadura-1.webp",
     },
   ];
 
@@ -125,6 +125,9 @@ export const MROSupplies = () => {
                 <img
                   src={item.image}
                   alt={`Producto MRO ${item.id}`}
+                  loading="lazy"
+                  width={400}
+                  height={400}
                   className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 p-4"
                 />
 
