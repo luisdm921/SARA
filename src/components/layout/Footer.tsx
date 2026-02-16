@@ -45,21 +45,27 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Síguenos</h4>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://facebook.com/sara.industrial"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-accent transition-colors duration-300"
                 aria-label="Facebook"
               >
                 <FaFacebook size={24} />
               </a>
               <a
-                href="#"
+                href="https://instagram.com/sara_industrial"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-accent transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <FaInstagram size={24} />
               </a>
               <a
-                href="#"
+                href="https://linkedin.com/company/sara-industrial"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-accent transition-colors duration-300"
                 aria-label="LinkedIn"
               >

@@ -86,7 +86,7 @@ export const Brands = () => {
         </div>
 
         {/* Grid de logos para dispositivos pequeños */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-16 lg:hidden">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-16 lg:hidden">
           {brands.map((brand, index) => (
             <div
               key={index}
