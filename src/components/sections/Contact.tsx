@@ -1,14 +1,75 @@
 "use client";
 
+import { useState } from "react";
 import { SectionHeader, Button } from "@/components/ui";
 import {
   FaPhone,
   FaEnvelope,
   FaMapMarkerAlt,
   FaWhatsapp,
+  FaPaperPlane,
 } from "react-icons/fa";
 
 export const Contact = () => {
+  const [formData, setFormData] = useState({
+    nombre: "",
+    email: "",
+    telefono: "",
+    mensaje: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      // Crear el cuerpo del email con todos los datos del formulario
+      const emailBody = `
+Nombre: ${formData.nombre}
+Teléfono: ${formData.telefono}
+Email: ${formData.email}
+
+Mensaje:
+${formData.mensaje}
+      `.trim();
+
+      const mailtoLink = `mailto:servicios.e.ingenieria.sara@gmail.com?subject=Contacto desde la web - ${formData.nombre}&body=${encodeURIComponent(emailBody)}`;
+
+      // Abrir el cliente de correo del usuario
+      window.location.href = mailtoLink;
+
+      // Limpiar el formulario
+      setFormData({
+        nombre: "",
+        email: "",
+        telefono: "",
+        mensaje: "",
+      });
+
+      setSubmitStatus("success");
+    } catch (error) {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contacto" className="relative py-20 overflow-hidden">
       {/* Background with gradient */}
@@ -106,51 +167,141 @@ export const Contact = () => {
             </div>
           </div>
 
-          {/* CTA Box */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 flex flex-col justify-center border border-white/20">
+          {/* Contact Form */}
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
             <h3 className="text-3xl font-bold mb-6 text-center text-white">
-              ¿Necesitas una Cotización?
+              Envíanos un Mensaje
             </h3>
-            <p className="text-blue-100 mb-8 text-center text-lg">
-              Contáctanos y te brindaremos una solución personalizada para tus
-              necesidades industriales.
-            </p>
-            <div className="space-y-4">
-              <a href="tel:8443900702" className="block w-full">
-                <Button
-                  variant="secondary"
-                  className="w-full flex items-center justify-center space-x-2 bg-cyan-500 hover:bg-cyan-600 text-white shadow-lg hover:shadow-xl transition-all"
+            <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Nombre */}
+              <div>
+                <label
+                  htmlFor="nombre"
+                  className="block text-sm font-medium text-blue-100 mb-2"
+                >
+                  Nombre Completo *
+                </label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  value={formData.nombre}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+                  placeholder="Tu nombre"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-blue-100 mb-2"
+                >
+                  Correo Electrónico *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+                  placeholder="tu@email.com"
+                />
+              </div>
+
+              {/* Teléfono */}
+              <div>
+                <label
+                  htmlFor="telefono"
+                  className="block text-sm font-medium text-blue-100 mb-2"
+                >
+                  Teléfono *
+                </label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  value={formData.telefono}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
+                  placeholder="844 123 4567"
+                />
+              </div>
+
+              {/* Mensaje */}
+              <div>
+                <label
+                  htmlFor="mensaje"
+                  className="block text-sm font-medium text-blue-100 mb-2"
+                >
+                  Mensaje *
+                </label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  value={formData.mensaje}
+                  onChange={handleChange}
+                  required
+                  rows={4}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all resize-none"
+                  placeholder="Cuéntanos sobre tu proyecto o necesidad..."
+                />
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <FaPaperPlane />
+                <span>
+                  {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
+                </span>
+              </button>
+
+              {/* Status Messages */}
+              {submitStatus === "success" && (
+                <p className="text-green-400 text-center text-sm">
+                  ¡Gracias! Tu mensaje se ha enviado correctamente.
+                </p>
+              )}
+              {submitStatus === "error" && (
+                <p className="text-red-400 text-center text-sm">
+                  Hubo un error al enviar el mensaje. Por favor, inténtalo de
+                  nuevo.
+                </p>
+              )}
+            </form>
+
+            {/* Alternative Contact Methods */}
+            <div className="mt-6 pt-6 border-t border-white/20">
+              <p className="text-blue-100 text-center text-sm mb-3">
+                O contáctanos directamente:
+              </p>
+              <div className="flex justify-center space-x-3">
+                <a
+                  href="tel:8443900702"
+                  className="bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                  aria-label="Llamar"
                 >
                   <FaPhone />
-                  <span>Llamar Ahora</span>
-                </Button>
-              </a>
-              <a
-                href="https://wa.me/528443900702"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full"
-              >
-                <Button
-                  variant="primary"
-                  className="w-full flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-700 shadow-lg hover:shadow-xl transition-all"
+                </a>
+                <a
+                  href="https://wa.me/528443900702"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                  aria-label="WhatsApp"
                 >
-                  <FaWhatsapp className="text-xl" />
-                  <span>WhatsApp</span>
-                </Button>
-              </a>
-              <a
-                href="mailto:servicios.e.ingenieria.sara@gmail.com"
-                className="block w-full"
-              >
-                <Button
-                  variant="outline"
-                  className="w-full flex items-center justify-center space-x-2 border-2 border-white text-white hover:bg-white hover:text-blue-900 shadow-lg hover:shadow-xl transition-all"
-                >
-                  <FaEnvelope />
-                  <span>Enviar Email</span>
-                </Button>
-              </a>
+                  <FaWhatsapp />
+                </a>
+              </div>
             </div>
           </div>
         </div>
