@@ -5,7 +5,6 @@ import { SectionHeader, Button } from "@/components/ui";
 import {
   FaPhone,
   FaEnvelope,
-  FaMapMarkerAlt,
   FaWhatsapp,
   FaPaperPlane,
 } from "react-icons/fa";
@@ -154,14 +153,21 @@ ${formData.mensaje}
 
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
               <div className="flex items-start space-x-4">
-                <div className="bg-cyan-500 p-4 rounded-xl shadow-lg">
-                  <FaMapMarkerAlt className="text-2xl text-white" />
+                <div className="bg-green-600 p-4 rounded-xl shadow-lg">
+                  <FaWhatsapp className="text-2xl text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-white">
-                    Ubicación
+                    WhatsApp
                   </h3>
-                  <p className="text-cyan-300">República Mexicana</p>
+                  <a
+                    href="https://wa.me/528443900702"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-300 hover:text-cyan-200 transition-colors duration-300 text-lg font-medium"
+                  >
+                    844 390 07 02
+                  </a>
                 </div>
               </div>
             </div>
