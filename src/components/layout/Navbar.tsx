@@ -222,17 +222,6 @@ export const Navbar = () => {
 
         {/* Menu Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-8 px-4">
-          {/* Logo in Mobile Menu */}
-          <div className="flex items-center gap-3 mb-4">
-            <FaIndustry className="text-5xl text-cyan-400 animate-pulse" />
-            <div className="flex flex-col">
-              <span className="text-3xl font-bold text-white">SARA</span>
-              <span className="text-sm text-cyan-300">
-                Servicios e Ingeniería
-              </span>
-            </div>
-          </div>
-
           {/* Navigation Links */}
           {navLinks.slice(0, 3).map((link, index) => (
             <a
