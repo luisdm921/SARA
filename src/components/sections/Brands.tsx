@@ -9,12 +9,26 @@ export const Brands = () => {
       name: "BFT",
       logo: "/images/logos_marcas_optimized/BFT23002-1-USA-RGB_Logo-Unterzeile.webp",
     },
+    {
+      name: "DMG Mori",
+      logo: "/images/logos_marcas_optimized/DMG_MORI_LOGO.webp",
+    },
     { name: "Dixon", logo: "/images/logos_marcas_optimized/Dixon_logo.webp" },
+    { name: "Emag", logo: "/images/logos_marcas_optimized/emag_logo.webp" },
     { name: "EXAIR", logo: "/images/logos_marcas_optimized/EXAIR_LOGO.webp" },
     { name: "Flow", logo: "/images/logos_marcas_optimized/Flow_logo.webp" },
+    { name: "Haas", logo: "/images/logos_marcas_optimized/haas_logo.webp" },
+    {
+      name: "Hardinge",
+      logo: "/images/logos_marcas_optimized/Hardinge_logo.webp",
+    },
     {
       name: "KMT Group",
       logo: "/images/logos_marcas_optimized/KMT_Group__Logo.webp",
+    },
+    {
+      name: "Lincoln",
+      logo: "/images/logos_marcas_optimized/lincoln_logo.webp",
     },
     {
       name: "Loctite",
@@ -24,10 +38,14 @@ export const Brands = () => {
       name: "LyndexNikken",
       logo: "/images/logos_marcas_optimized/LyndexNikken_logo.webp",
     },
+    { name: "MAG", logo: "/images/logos_marcas_optimized/mag_logo.webp" },
+    { name: "Makino", logo: "/images/logos_marcas_optimized/makino_logo.webp" },
+    { name: "Mazak", logo: "/images/logos_marcas_optimized/Mazak_logo.webp" },
     {
       name: "Mobile",
       logo: "/images/logos_marcas_optimized/mobile-logo-png-1358.webp",
     },
+    { name: "Okuma", logo: "/images/logos_marcas_optimized/okuma_logo.webp" },
     { name: "OMAX", logo: "/images/logos_marcas_optimized/omax-logo.webp" },
     { name: "Sandvik", logo: "/images/logos_marcas_optimized/Sandvik.webp" },
     {
@@ -38,6 +56,7 @@ export const Brands = () => {
       name: "Toolmex",
       logo: "/images/logos_marcas_optimized/TOOLMEX-LOGO.webp",
     },
+    { name: "Trumpf", logo: "/images/logos_marcas_optimized/trumpf_logo.webp" },
   ];
 
   // Duplicar marcas para efecto infinito
