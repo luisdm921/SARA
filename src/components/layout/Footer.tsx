@@ -1,8 +1,4 @@
-import {
-  FaPhone,
-  FaEnvelope,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 export const Footer = () => {
   return (

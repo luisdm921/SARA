@@ -2,11 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { FaBars, FaTimes, FaIndustry } from "react-icons/fa";
+import { FaBars, FaTimes, FaIndustry, FaChevronDown } from "react-icons/fa";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,16 +23,19 @@ export const Navbar = () => {
     { href: "#inicio", label: "Inicio" },
     { href: "#nosotros", label: "Nosotros" },
     { href: "#servicios", label: "Servicios" },
-    { href: "#maquinaria", label: "Maquinaria" },
-    { href: "#equipo-seminuevo", label: "Equipo Seminuevo" },
-    { href: "#equipos-soldadura", label: "Soldadura" },
-    { href: "#mro-consumibles", label: "MRO" },
     { href: "#marcas", label: "Marcas" },
-    { href: "#contacto", label: "Contacto" },
+  ];
+
+  const productLinks = [
+    { href: "#maquinaria", label: "Maquinaria CNC" },
+    { href: "#equipo-seminuevo", label: "Maquinaria de Transformación" },
+    { href: "#equipos-soldadura", label: "Equipos de Soldadura" },
+    { href: "#mro-consumibles", label: "MRO & Consumibles" },
   ];
 
   const handleLinkClick = () => {
     setIsOpen(false);
+    setIsMobileProductsOpen(false);
   };
 
   return (
@@ -75,7 +80,7 @@ export const Navbar = () => {
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center space-x-1">
-              {navLinks.map((link) => (
+              {navLinks.slice(0, 3).map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
@@ -88,6 +93,63 @@ export const Navbar = () => {
                   {link.label}
                 </a>
               ))}
+
+              {/* Productos Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setIsProductsOpen(true)}
+                onMouseLeave={() => setIsProductsOpen(false)}
+              >
+                <button
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-1 ${
+                    isScrolled
+                      ? "text-slate-700 hover:bg-blue-50 hover:text-primary"
+                      : "text-white hover:bg-white/10"
+                  }`}
+                >
+                  Productos
+                  <FaChevronDown
+                    className={`text-xs transition-transform duration-300 ${
+                      isProductsOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {/* Dropdown Menu */}
+                <div
+                  className={`absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 ${
+                    isProductsOpen
+                      ? "opacity-100 visible translate-y-0"
+                      : "opacity-0 invisible -translate-y-2"
+                  }`}
+                >
+                  {productLinks.map((link, index) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setIsProductsOpen(false)}
+                      className="block px-5 py-3 text-slate-700 hover:bg-blue-50 hover:text-primary transition-colors duration-200 border-b border-gray-100 last:border-b-0"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {navLinks.slice(3).map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                    isScrolled
+                      ? "text-slate-700 hover:bg-blue-50 hover:text-primary"
+                      : "text-white hover:bg-white/10"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ))}
+
               <a
                 href="#contacto"
                 className={`ml-4 px-6 py-2.5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg ${
@@ -96,7 +158,7 @@ export const Navbar = () => {
                     : "bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400"
                 }`}
               >
-                Cotizar
+                Contacto
               </a>
             </div>
 
@@ -172,7 +234,7 @@ export const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          {navLinks.map((link, index) => (
+          {navLinks.slice(0, 3).map((link, index) => (
             <a
               key={link.href}
               href={link.href}
@@ -188,18 +250,75 @@ export const Navbar = () => {
             </a>
           ))}
 
+          {/* Mobile Products Expandable */}
+          <div className="w-full flex flex-col items-center">
+            <button
+              onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
+              className="text-white text-2xl font-semibold transition-all hover:text-cyan-300 hover:scale-110 flex items-center gap-2"
+              style={{
+                animation: isOpen ? `fadeInUp 0.5s ease-out 0.3s both` : "none",
+              }}
+            >
+              Productos
+              <FaChevronDown
+                className={`text-lg transition-transform duration-300 ${
+                  isMobileProductsOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {/* Submenu Products - Mismo estilo que items principales */}
+            <div
+              className={`overflow-hidden transition-all duration-500 ease-in-out w-full ${
+                isMobileProductsOpen ? "max-h-[600px] mt-4" : "max-h-0"
+              }`}
+            >
+              <div className="space-y-6 flex flex-col items-center">
+                {productLinks.map((link, index) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-white text-2xl font-semibold transition-all hover:text-cyan-300 hover:scale-110"
+                    onClick={handleLinkClick}
+                    style={{
+                      animation: isMobileProductsOpen
+                        ? `fadeInUp 0.5s ease-out ${(index + 0.4) * 0.1}s both`
+                        : "none",
+                    }}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {navLinks.slice(3).map((link, index) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-white text-2xl font-semibold transition-all hover:text-cyan-300 hover:scale-110"
+              onClick={handleLinkClick}
+              style={{
+                animation: isOpen
+                  ? `fadeInUp 0.5s ease-out ${(index + 4) * 0.1}s both`
+                  : "none",
+              }}
+            >
+              {link.label}
+            </a>
+          ))}
+
           {/* CTA Button */}
           <a
             href="#contacto"
             onClick={handleLinkClick}
             className="mt-6 px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-bold text-lg transition-all hover:from-cyan-400 hover:to-blue-400 hover:scale-110 shadow-2xl"
             style={{
-              animation: isOpen
-                ? `fadeInUp 0.5s ease-out ${navLinks.length * 0.1}s both`
-                : "none",
+              animation: isOpen ? `fadeInUp 0.5s ease-out 0.6s both` : "none",
             }}
           >
-            Cotizar Ahora
+            Contacto
           </a>
         </div>
       </div>

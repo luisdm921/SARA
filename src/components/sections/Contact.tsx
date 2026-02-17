@@ -2,12 +2,7 @@
 
 import { useState } from "react";
 import { SectionHeader, Button } from "@/components/ui";
-import {
-  FaPhone,
-  FaEnvelope,
-  FaWhatsapp,
-  FaPaperPlane,
-} from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaWhatsapp, FaPaperPlane } from "react-icons/fa";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +18,7 @@ export const Contact = () => {
   >("idle");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -266,9 +261,7 @@ ${formData.mensaje}
                 className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <FaPaperPlane />
-                <span>
-                  {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
-                </span>
+                <span>{isSubmitting ? "Enviando..." : "Enviar Mensaje"}</span>
               </button>
 
               {/* Status Messages */}
