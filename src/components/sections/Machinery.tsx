@@ -19,10 +19,6 @@ export const Machinery = () => {
     },
     {
       id: 3,
-      image: "/images/machinery/cnc-centro-mecanizado-1.webp",
-    },
-    {
-      id: 4,
       image: "/images/machinery/cnc-torno-2.webp",
     },
   ];
@@ -75,8 +71,7 @@ export const Machinery = () => {
             >
               {/* Imagen */}
               <div
-                className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-gray-100"
-                style={{ width: "400px", height: "400px" }}
+                className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-gray-100 w-full aspect-square max-w-[400px] mx-auto"
               >
                 <img
                   src={machine.image}

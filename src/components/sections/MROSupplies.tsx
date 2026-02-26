@@ -39,34 +39,30 @@ export const MROSupplies = () => {
     },
     {
       id: 8,
-      image: "/images/mro-supplies/epp-proteccion-1.webp",
-    },
-    {
-      id: 9,
       image: "/images/mro-supplies/equipos-seguridad-1.webp",
     },
     {
-      id: 10,
+      id: 9,
       image: "/images/mro-supplies/sujetadores-tornilleria-1.webp",
     },
     {
-      id: 11,
+      id: 10,
       image: "/images/mro-supplies/medicion-calibracion-1.webp",
     },
     {
-      id: 12,
+      id: 11,
       image: "/images/mro-supplies/limpieza-industrial-1.webp",
     },
     {
-      id: 13,
+      id: 12,
       image: "/images/mro-supplies/consumibles-taller-1.webp",
     },
     {
-      id: 14,
+      id: 13,
       image: "/images/mro-supplies/accesorios-maquinado-1.webp",
     },
     {
-      id: 15,
+      id: 14,
       image: "/images/mro-supplies/suministros-soldadura-1.webp",
     },
   ];
@@ -119,8 +115,7 @@ export const MROSupplies = () => {
             >
               {/* Imagen */}
               <div
-                className="relative overflow-hidden bg-gradient-to-br from-emerald-50 to-gray-100"
-                style={{ width: "400px", height: "400px" }}
+                className="relative overflow-hidden bg-gradient-to-br from-emerald-50 to-gray-100 w-full aspect-square max-w-[400px] mx-auto"
               >
                 <img
                   src={item.image}

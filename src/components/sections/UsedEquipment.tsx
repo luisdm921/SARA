@@ -90,8 +90,7 @@ export const UsedEquipment = () => {
             >
               {/* Imagen */}
               <div
-                className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-gray-100"
-                style={{ width: "400px", height: "400px" }}
+                className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-gray-100 w-full aspect-square max-w-[400px] mx-auto"
               >
                 <img
                   src={item.image}

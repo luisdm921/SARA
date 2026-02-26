@@ -27,34 +27,30 @@ export const WeldingEquipment = () => {
     },
     {
       id: 5,
-      image: "/images/welding-equipment/soldadora-inverter-1.webp",
-    },
-    {
-      id: 6,
       image: "/images/welding-equipment/soldadora-multiproceso-1.webp",
     },
     {
-      id: 7,
+      id: 6,
       image: "/images/welding-equipment/soldadora-orbital-1.webp",
     },
     {
-      id: 8,
+      id: 7,
       image: "/images/welding-equipment/soldadora-resistencia-1.webp",
     },
     {
-      id: 9,
+      id: 8,
       image: "/images/welding-equipment/soldadora-laser-1.webp",
     },
     {
-      id: 10,
+      id: 9,
       image: "/images/welding-equipment/plasma-cutter-1.webp",
     },
     {
-      id: 11,
+      id: 10,
       image: "/images/welding-equipment/generador-soldadura-1.webp",
     },
     {
-      id: 12,
+      id: 11,
       image: "/images/welding-equipment/extractor-humos-soldadura-1.webp",
     },
   ];
@@ -109,8 +105,7 @@ export const WeldingEquipment = () => {
             >
               {/* Imagen */}
               <div
-                className="relative overflow-hidden bg-gradient-to-br from-orange-50 to-gray-100"
-                style={{ width: "400px", height: "400px" }}
+                className="relative overflow-hidden bg-gradient-to-br from-orange-50 to-gray-100 w-full aspect-square max-w-[400px] mx-auto"
               >
                 <img
                   src={item.image}
