@@ -5,5 +5,6 @@ export { Machinery } from "./Machinery";
 export { UsedEquipment } from "./UsedEquipment";
 export { WeldingEquipment } from "./WeldingEquipment";
 export { MROSupplies } from "./MROSupplies";
+export { UHPComponents } from "./UHPComponents";
 export { Brands } from "./Brands";
 export { Contact } from "./Contact";

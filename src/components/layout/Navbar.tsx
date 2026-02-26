@@ -31,6 +31,7 @@ export const Navbar = () => {
     { href: "#equipo-seminuevo", label: "Maquinaria de Transformación" },
     { href: "#equipos-soldadura", label: "Equipos de Soldadura" },
     { href: "#mro-consumibles", label: "MRO & Consumibles" },
+    { href: "#uhp-componentes", label: "Componentes UHP" },
   ];
 
   const handleLinkClick = () => {

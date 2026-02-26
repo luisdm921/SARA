@@ -6,6 +6,7 @@ import {
   UsedEquipment,
   WeldingEquipment,
   MROSupplies,
+  UHPComponents,
   Brands,
   Contact,
 } from "@/components";
@@ -20,6 +21,7 @@ export default function Home() {
       <UsedEquipment />
       <WeldingEquipment />
       <MROSupplies />
+      <UHPComponents />
       <Brands />
       <Contact />
     </>
