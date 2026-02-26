@@ -70,9 +70,7 @@ export const Machinery = () => {
               onClick={() => setSelectedIndex(index)}
             >
               {/* Imagen */}
-              <div
-                className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-gray-100 w-full aspect-square max-w-[400px] mx-auto"
-              >
+              <div className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-gray-100 w-full aspect-square max-w-[400px] mx-auto">
                 <img
                   src={machine.image}
                   alt={`Maquinaria CNC ${machine.id}`}

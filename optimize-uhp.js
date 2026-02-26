@@ -9,8 +9,7 @@ const outputDir = "public/images/uhp";
 const fileMapping = {
   "WhatsApp Image 2026-02-25 at 5.26.37 PM.jpeg":
     "componentes-uhp-bomba-intensificadora-1.jpg",
-  "WhatsApp Image 2026-02-25 at 5.26.39 PM.jpeg":
-    "sellos-alta-presion-1.jpg",
+  "WhatsApp Image 2026-02-25 at 5.26.39 PM.jpeg": "sellos-alta-presion-1.jpg",
   "WhatsApp Image 2026-02-25 at 5.26.39 PM (1).jpeg":
     "cartuchos-presion-succion-1.jpg",
   "WhatsApp Image 2026-02-25 at 5.26.39 PM (2).jpeg":
@@ -29,9 +28,7 @@ async function optimizeImages() {
   let totalOriginalSize = 0;
   let totalOptimizedSize = 0;
 
-  console.log(
-    "🔄 Optimizando y renombrando imágenes de Componentes UHP...\n",
-  );
+  console.log("🔄 Optimizando y renombrando imágenes de Componentes UHP...\n");
 
   for (const [originalName, newName] of Object.entries(fileMapping)) {
     const inputPath = path.join(inputDir, originalName);

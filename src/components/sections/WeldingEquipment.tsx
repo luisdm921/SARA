@@ -104,9 +104,7 @@ export const WeldingEquipment = () => {
               onClick={() => setSelectedIndex(index)}
             >
               {/* Imagen */}
-              <div
-                className="relative overflow-hidden bg-gradient-to-br from-orange-50 to-gray-100 w-full aspect-square max-w-[400px] mx-auto"
-              >
+              <div className="relative overflow-hidden bg-gradient-to-br from-orange-50 to-gray-100 w-full aspect-square max-w-[400px] mx-auto">
                 <img
                   src={item.image}
                   alt={`Equipo de soldadura ${item.id}`}
